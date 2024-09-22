@@ -1,0 +1,58 @@
+﻿@model ControlEscolar.Models.Pago
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pago</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Alumno.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alumno.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroConsecutivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroConsecutivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConceptoPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConceptoPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Importe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Importe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaPago)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PagoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

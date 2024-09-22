@@ -1,0 +1,22 @@
+﻿@model ControlEscolar.Models.LoginViewModel
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken() <!-- Esto agrega el token antifalsificación -->
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.NombreUsuario)
+        @Html.TextBoxFor(m => m.NombreUsuario, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.NombreUsuario)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Contrasena)
+        @Html.PasswordFor(m => m.Contrasena, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Contrasena)
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+    </div>
+}

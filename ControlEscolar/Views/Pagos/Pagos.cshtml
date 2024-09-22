@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ControlEscolar.Models.Pago>
+
+@{
+    ViewBag.Title = "Lista de Pagos";
+}
+
+<h2>Lista de Pagos</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Importe)</th>
+        <th>@Html.DisplayNameFor(model => model.FechaPago)</th>
+        <th>@Html.DisplayNameFor(model => model.ConceptoPago)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var pago in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => pago.Importe)</td>
+            <td>@Html.DisplayFor(modelItem => pago.FechaPago)</td>
+            <td>@Html.DisplayFor(modelItem => pago.ConceptoPago)</td>
+            <td>
+                @Html.ActionLink("Detalles", "Detalles", new { id = pago.PagoId })
+            </td>
+        </tr>
+    }
+</table>
