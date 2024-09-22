@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Lista de carreras</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Registrar carrera", "Create")
 </p>
 <table class="table">
     <tr>
@@ -23,14 +23,11 @@
             @Html.DisplayFor(modelItem => item.Nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.CarreraId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.CarreraId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.CarreraId }) |
-            @*@Html.ActionLink("RelaciónAlumnos", "AlumnosPorCarrera", "Alumnos", new { id = item.CarreraId })*@
-
+            @Html.ActionLink("Editar", "Edit", new { id = item.CarreraId }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.CarreraId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.CarreraId }) |
             @Html.ActionLink("Relación de Alumnos", "AlumnosPorCarrera", "Alumnos", new { id = item.CarreraId }, null)
         </td>
     </tr>
 }
-
 </table>
