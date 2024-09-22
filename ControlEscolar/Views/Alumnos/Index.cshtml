@@ -7,7 +7,7 @@
 <h2>Lista de Alumnos</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo registro", "Create")
 </p>
 <table class="table">
     <tr>
@@ -65,9 +65,9 @@
             @Html.DisplayFor(modelItem => item.FechaAlta)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.AlumnoId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.AlumnoId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.AlumnoId }) |
+            @Html.ActionLink("Editar", "Edit", new { id = item.AlumnoId }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.AlumnoId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.AlumnoId }) |
             @Html.ActionLink("Ver Pagos", "Pagos", "Pagos", new { id = item.AlumnoId }, null)
         </td>
     </tr>
